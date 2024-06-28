@@ -1,2 +1,2 @@
-// Package pvecluster exports types, functions, subpackages for provisioning pvecluster resources.
+// Provider boilerplate
 package pvecluster
