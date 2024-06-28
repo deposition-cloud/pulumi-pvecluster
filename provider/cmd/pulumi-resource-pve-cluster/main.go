@@ -17,7 +17,7 @@ package main
 import (
 	p "github.com/pulumi/pulumi-go-provider"
 
-	xyz "github.com/pulumi/pulumi-xyz/provider"
+	xyz "github.com/deposition-cloud/pulumi-pve-cluster/provider"
 )
 
 // Serve the provider against Pulumi's Provider protocol.
