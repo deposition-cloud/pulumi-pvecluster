@@ -1,10 +1,15 @@
-PROJECT_NAME := Pulumi Xyz Resource Provider
+SHELL := /bin/bash
 
-PACK             := xyz
+PROJECT_NAME := Pulumi PVE Cluster Resource Provider
+
+PACK             := pvecluster
 PACKDIR          := sdk
-PROJECT          := github.com/pulumi/pulumi-xyz
-NODE_MODULE_NAME := @abc/xyz
-NUGET_PKG_NAME   := Abc.Xyz
+PROJECT          := github.com/deposition-cloud/pulumi-${PACK}
+ORG              := deposition-cloud
+NAME             := pvecluster
+REPOSITORY       := github.com/deposition-cloud/pulumi-${PACK}
+NODE_MODULE_NAME := @deposition.cloud/pulumi-${PACK}
+NUGET_PKG_NAME   := DepositionCloud.PVECluster
 
 PROVIDER        := pulumi-resource-${PACK}
 VERSION         ?= $(shell pulumictl get version)
@@ -71,6 +76,8 @@ nodejs_sdk::
 	rm -rf sdk/nodejs
 	pulumi package gen-sdk $(WORKING_DIR)/bin/$(PROVIDER) --language nodejs
 	cd ${PACKDIR}/nodejs/ && \
+	  sed -i.bak 's|@pulumi/${PACK}|${NODE_MODULE_NAME}|' package.json && \
+		rm ./package.json.bak && \
 		yarn install && \
 		yarn run tsc && \
 		cp ../../README.md ../../LICENSE package.json yarn.lock bin/ && \

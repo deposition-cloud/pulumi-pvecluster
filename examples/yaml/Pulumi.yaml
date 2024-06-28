@@ -1,13 +1,13 @@
-name: provider-xyz-native
+name: provider-pvecluster-native
 runtime: yaml
 plugins:
   providers:
-    - name: xyz
+    - name: pvecluster
       path: ../../bin
 
 resources:
   myRandomResource:
-    type: xyz:Random
+    type: pvecluster:Random
     properties:
       length: 24
 
