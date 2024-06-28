@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/deposition-cloud/pulumi-pvecluster/sdk/go/pvecluster"
+	"github.com/deposition-cloud/pulumi-pve-cluster/sdk/go/pvecluster"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
