@@ -6,6 +6,6 @@
 	"dependencies": {
 		"typescript": "^4.0.0",
 		"@pulumi/pulumi": "^3.0.0",
-		"@pulumi/pvecluster": "0.0.1-alpha.1719546333+bb5a048a.dirty"
+		"@pulumi/pvecluster": "0.0.1-alpha.1719546756+8752a2d5.dirty"
 	}
 }

@@ -1,6 +1,6 @@
 module github.com/deposition-cloud/pulumi-pvecluster/tests
 
-go 1.21
+go 1.22
 
 replace github.com/deposition-cloud/pulumi-pvecluster/provider => ../provider
 

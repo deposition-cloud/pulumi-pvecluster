@@ -1,6 +1,6 @@
 module github.com/deposition-cloud/pulumi-pvecluster/provider
 
-go 1.21
+go 1.22
 
 require (
 	github.com/pulumi/pulumi-go-provider v0.11.1
